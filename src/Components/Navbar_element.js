@@ -3,7 +3,7 @@ import '../index.css';
 
 function Navbar_element(props) {
     return (
-        <button>
+        <button onClick={props.onClick}>
             {props.name}
         </button>
     )
