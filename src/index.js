@@ -62,7 +62,7 @@ class App extends React.Component{
                         firstname={this.state.pro[this.state.activePro].prenom}
                         anniversary={this.state.pro[this.state.activePro].anniversary}
                     />
-                    <Post/>
+                    <Post comment={this.state.pro[this.state.activePro].lastComment}/>
                 </main>
             </body>
         );

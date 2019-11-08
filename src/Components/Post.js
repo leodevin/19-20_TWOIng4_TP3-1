@@ -4,7 +4,7 @@ import '../index.css';
 function Post(props) {
     return(
         <div>
-            <p>Commentaires du gars</p>
+            <p>Dernier commentaire : {props.comment}</p>
             <button>👍 C'est super !</button>
         </div>
     )
