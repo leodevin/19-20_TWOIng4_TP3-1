@@ -6,11 +6,13 @@ function Profil(props) {
         <div>
             <img/>
             <div>
-                <p></p>
-                <p></p>
+                <p>Nom : {props.name}</p>
+                <p>Prenom : {props.firstname}</p>
             </div>
-            <p></p>
+            <p>Date de naissance : {props.anniversary}</p>
             <button>Change style</button>
         </div>
         )
 }
+
+export default Profil;
