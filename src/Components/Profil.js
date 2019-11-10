@@ -8,15 +8,15 @@ import profil_image2 from '../images/profil_image2.jpeg';
 function Profil(props) {
     return(
         <div className="profilBox">
-            <img className={"profilImage"} src={require("../images/profil_image"+ props.img+".jpeg")}/>
+            <div className={"imgBox"}> <img className={"profilImage"} src={require("../images/profil_image"+ props.img+".jpeg")}/></div>
             <div className={"names"}>
                 <p>Nom : {props.name}</p>
                 <p>Prenom : {props.firstname}</p>
             </div>
             <p>Date de naissance : {props.anniversary}</p>
-            <button onClick={props.onClickColor}>
+            <div className={"changeStyle"}> <button onClick={props.onClickColor}>
                 Change style
-            </button>
+            </button></div>
         </div>
         )
 }

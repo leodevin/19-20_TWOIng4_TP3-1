@@ -3,9 +3,9 @@ import '../index.css';
 
 function Post(props) {
     return(
-        <div>
+        <div className={"commentBox"}>
             <p>Dernier commentaire : {props.comment}</p>
-            <button>👍 C'est super !</button>
+            <div className={"super"}><button>👍 C'est super !</button></div>
         </div>
     )
 }

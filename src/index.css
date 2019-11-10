@@ -30,6 +30,7 @@ main {
     border-color: azure;
 }
 
+
 .names {
     display: flex;
     flex-direction: row;
@@ -40,8 +41,27 @@ main {
     border: 3px solid black;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 30px;
+}
+.imgBox img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+.changeStyle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.changeStyle button{
+    width: 100px;
 }
 
-.profilImage {
+.commentBox{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    padding: 30px;
 }

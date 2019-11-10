@@ -23,7 +23,8 @@ class App extends React.Component{
                 anniversary: '12/12/1998',
                 lastComment: 'Jadore le fromage',
                 selectCol: 0,
-                img: 'profil_image0.jpeg'
+                img: 'profil_image0.jpeg',
+                nbSuper: 0
             },
             {
                 nom: 'martine',
@@ -31,7 +32,8 @@ class App extends React.Component{
                 anniversary: '13/03/1996',
                 lastComment: 'Moi je prefere le sauciflard',
                 selectCol: 0,
-                img: 'profil_image1.jpg'
+                img: 'profil_image1.jpg',
+                nbSuper: 0
             },
             {
                 nom: 'camille',
@@ -39,7 +41,8 @@ class App extends React.Component{
                 anniversary: '21/11/1962',
                 lastComment: 'Dans tous les cas Vin rouge !',
                 selectCol: 0,
-                img: 'profil_image2.jpeg'
+                img: 'profil_image2.jpeg',
+                nbSuper: 0
             }
         ];
 
@@ -84,7 +87,10 @@ class App extends React.Component{
                         onClickColor={() => this.handleClickColor()}
                         img = {this.state.activePro}
                     /></div>
-                    <Post comment={this.state.pro[this.state.activePro].lastComment} />
+                    <Post
+                        comment={this.state.pro[this.state.activePro].lastComment}
+                        nbSuper={this.state.pro[this.state.activePro].nbSuper}
+                    />
                 </main>
             </body>
         );
