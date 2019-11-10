@@ -10,7 +10,9 @@ function Profil(props) {
                 <p>Prenom : {props.firstname}</p>
             </div>
             <p>Date de naissance : {props.anniversary}</p>
-            <button>Change style</button>
+            <button onClick={props.onClickColor}>
+                Change style
+            </button>
         </div>
         )
 }
