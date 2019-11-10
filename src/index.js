@@ -69,13 +69,13 @@ class App extends React.Component{
             <body className="page">
                 <header>
                     <nav>
-                        <div className="navElement"><Navbar_element className="navElement" name={this.state.pro[0].nom} onClick={() => this.handleClick(0)}/></div>
-                        <div className="navElement"><Navbar_element className="navElement" name={this.state.pro[1].nom } onClick={() => this.handleClick(1)}/></div>
-                        <div className="navElement"><Navbar_element name={this.state.pro[2].nom} onClick={() => this.handleClick(2)}/></div>
+                        <Navbar_element name={this.state.pro[0].nom} onClick={() => this.handleClick(0)}/>
+                        <Navbar_element name={this.state.pro[1].nom } onClick={() => this.handleClick(1)}/>
+                        <Navbar_element name={this.state.pro[2].nom} onClick={() => this.handleClick(2)}/>
                     </nav>
                 </header>
                 <main >
-                    <div className="profilBox" style={{
+                    <div style={{
                         backgroundColor: this.state.cols[this.state.pro[this.state.activePro].selectCol],
                     }}><Profil
                         name={this.state.pro[this.state.activePro].nom}
