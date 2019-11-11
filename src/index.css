@@ -1,5 +1,9 @@
 body {
     font: 14px "Helvetica Neue", Futura, sans-serif;
+    margin-right: 20%;
+    margin-left: 20%;
+    color: white;
+    background-color: #d1daed;
 }
 
 .page {
@@ -11,9 +15,8 @@ nav {
     flex: 1 1 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     height: 60px;
-    background-color: dodgerblue;
 }
 
 main {
@@ -23,11 +26,11 @@ main {
 }
 
 .navElement {
-    flex: 0 0 15%;
-    background-color: deepskyblue;
-    margin: 2%;
+    flex: 0 1 60px;
+    background-color: #3b5998;
+    margin: 15px;
     border-radius: 15%;
-    border-color: azure;
+    color: white;
 }
 
 
@@ -48,6 +51,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+    border-radius: 100%;
 }
 .changeStyle{
     display: flex;
@@ -64,4 +68,5 @@ main {
     flex-direction: column;
     border: 3px solid black;
     padding: 30px;
+    background-color: #3b5998;
 }

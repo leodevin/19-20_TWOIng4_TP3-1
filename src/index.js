@@ -14,7 +14,7 @@ class App extends React.Component{
     constructor(props) {
         super(props);
 
-        const colors = ['white', 'red', 'blue', 'orange'];
+        const colors = ['#3b987a', '#3b5998', '#983b59', '#987a3b'];
 
         const profils = [
             {
@@ -67,6 +67,11 @@ class App extends React.Component{
         }
     }
 
+    handleClickSuper(){
+        this.state.pro[this.state.activePro].nbSuper++;
+        this.forceUpdate()
+    }
+
     render() {
         return (
             <body className="page">
@@ -89,6 +94,7 @@ class App extends React.Component{
                     /></div>
                     <Post
                         comment={this.state.pro[this.state.activePro].lastComment}
+                        onClickSuper={() => this.handleClickSuper()}
                         nbSuper={this.state.pro[this.state.activePro].nbSuper}
                     />
                 </main>
