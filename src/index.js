@@ -10,12 +10,12 @@ import Post from "./Components/Post";
 
 
 //Fonction équivalente au main
-class App extends React.Component{
+class Index extends React.Component{
     constructor(props) {
         super(props);
 
+        //constantes
         const colors = ['#3b987a', '#3b5998', '#983b59', '#987a3b'];
-
         const profils = [
             {
                 nom: 'bob',
@@ -46,6 +46,7 @@ class App extends React.Component{
             }
         ];
 
+        //definition du state
         this.state = {
             pro: profils,
             activePro: 0,
@@ -53,10 +54,12 @@ class App extends React.Component{
         };
     }
 
+    //gérer le click pour choisir le profil
     handleClick(i){
         this.setState({activePro: i});
     }
 
+    //gérer le click pour changer la couleur du profil
     handleClickColor(){
         if(this.state.pro[this.state.activePro].selectCol==3){
             this.state.pro[this.state.activePro].selectCol = 0;
@@ -67,19 +70,23 @@ class App extends React.Component{
         }
     }
 
+    //gérer le click du "c'est super !"
     handleClickSuper(){
         this.state.pro[this.state.activePro].nbSuper++;
         this.forceUpdate()
     }
 
     render() {
+        const proHtml = [];
+        for (const [index, value] of this.state.pro.entries()) {
+            proHtml.push(<Navbar_element name={value.nom} onClick={() => this.handleClick(index)}/>)
+        }
+
         return (
             <body className="page">
                 <header>
                     <nav>
-                        <Navbar_element name={this.state.pro[0].nom} onClick={() => this.handleClick(0)}/>
-                        <Navbar_element name={this.state.pro[1].nom } onClick={() => this.handleClick(1)}/>
-                        <Navbar_element name={this.state.pro[2].nom} onClick={() => this.handleClick(2)}/>
+                        {proHtml}
                     </nav>
                 </header>
                 <main >
@@ -104,5 +111,5 @@ class App extends React.Component{
 }
 
 //Commande pour lancer l'appli en react
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));
 
