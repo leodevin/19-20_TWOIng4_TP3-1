@@ -6,7 +6,11 @@ function Post(props) {
         <div className={"commentBox"}>
             <p>Dernier commentaire : {props.comment}</p>
             <div className={"super"}><button onClick={props.onClickSuper}>👍 C'est super !</button></div>
-            <p> {props.nbSuper} 👍</p>
+            <p> {props.nbSuper}
+                <div style={{
+                    fontSize: props.nbSuper*2,
+                }}>👍</div>
+            </p>
         </div>
     )
 }
